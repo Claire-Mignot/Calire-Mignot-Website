@@ -25,11 +25,26 @@ html {
  * Basic styles for links
  */
 a {
-  color: $brand-color;
+  display: block;
+  color: $text-color;
   text-decoration: none;
 
-  @include on-event {
-    color: $text-color;
-    text-decoration: underline;
-  }
+  // @include on-event {
+  //   color: $text-color;
+  //   text-decoration: underline;
+  // }
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+figure, h1, h2, h3, p, ul {
+  display: block;
+  padding: 0;
+  margin: 0;
+}
+ul {
+  list-style: none;
 }
