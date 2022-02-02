@@ -16,98 +16,134 @@
   <link rel="apple-touch-icon" href="icon.png">
   <!-- Place favicon.ico in the root directory -->
 
-  <link rel="stylesheet" href="css/normalize.css">
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+  <!-- Fontawesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
+
+  <!-- Google font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Klee+One:wght@600&display=swap" rel="stylesheet"> 
+  <!-- My CSS -->
   <link rel="stylesheet" href="stylesheets/main.css">
+
+
 
   <meta name="theme-color" content="#fafafa">
 </head>
 
-<body>
+<body class="container">
 
-    <!--========== HEADER (PHONE) ========-->
+  <!--========== HEADER (PHONE) ========-->
 
-  <header>
+  <header class="grid-item-1">
     <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
       <!-- aria -control to say the button control the ul with id=primary-control -->
       <!-- aria-expanded to set: the menu is not expanded until you click on the burger to change aria-expanded to 'true'-->
+      <!-- <i class="fas fa-bars fa-1x"></i> -->
       <span></span>
     </button>
+    <!-- <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="true">
+
+      <i class="fas fa-times fa-1x"></i>
+    </button> -->
+    <img src="img/Cergy.JPG" alt="/">
+
   </header>
 
-   <!--========== SIDE-BAR ========-->
-  <aside>
+  <!--========== SIDE-BAR ========-->
+  <aside class="grid-item-2 primary-navigation" id="primary-navigation" data-visible="false">
     <input class="search" type="text" placeholder="...">
     <nav>
       <ul>
         <li><a href="index.htlml">Accueil</a></li>
-        <li><a href="A-propos.htlml">A propos</a></li>
-        <li><a href="Comment-consulter.htlml">Comment consulter?</a></li>
-        <li><a href="Cadre-du-travail.htlml">Cadre du travail</a></li>
-        <li><a href="Resources.htlml">Ressources</a></li>
-        <li><a href="Contact.htlml">Contact</a></li>
+        <li><a href="presentation.htlml">Présentation</a></li>
+        <li><a class="nav-sengager" href="sengager.htlml">
+            <p>
+              S'engager
+            </p>
+            <p>
+              dans un travail
+            </p>
+            <p>
+              sur soi
+            </p>
+          </a></li>
+        <li><a href="lien.htlml">En savoir plus</a></li>
+        <li><a href="contact.htlml">Me contacter</a></li>
       </ul>
     </nav>
   </aside>
 
-  <!--========== MAIN ========-->
-  <main class="home">
-    <section class="hero">
-     
-      <h1 class="hero__1 hero__title">
-        Claire Mignot – Psychothérapie Cergy
-      </h1>
-      <figure class="hero__2 hero__image">
-        <img src="img/pic-3.jpg" alt="/">
-      </figure>
-      <a class="hero__3 hero__gestalt button" href="Gestalt-therapie">Gestalt-thérapie</a>
-      <h2 class="hero__4">Contactez-moi</h2>
-
-      <a class="hero__5 hero__phone button" href="#">0652406162</a>
-
-      <a class="hero__6 hero__rdv button" href="https://www.pagesjaunes.fr/pros/55741519#calendrier">Prenez RDV</a>
-    </section>
-
-    <section class="feature-1">
-      <h2 class="feature-1__1">
-        Qui suis-je?
-      </h2>
-      <p class="feature-1__2">
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti quis magni possimus fuga molestiae tempora,
-        eum explicabo magnam reprehenderit eius, nostrum laudantium officia dicta. Atque qui voluptates laborum
-        consequuntur voluptatibus.
-      </p>
-      <a class="feature-1__3 button" href="#">En savoir plus</a>
-      <figure class="feature-1__4">
-        <img src="img/pic-1.jpg" alt="/">
-      </figure>
-    </section>
-
-    <section class="feature-2">
-      <h2 class="feature-2__1">
-        Comment-consulter ?
-      </h2>
-      <p class="feature-2__2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, laboriosam explicabo quae porro, laudantium eum
-        dolorem quidem autem similique dolorum corrupti id, ipsum exercitationem numquam repellendus reiciendis at
-        commodi cumque!</p>
-      <ul class="feature-2__3 feature-2__list-action">
-        <li><a class="button" href="#">Motif de consultation</a></li>
-        <li><a class="button" href="#">Thérapie ou relation d'aide?</a></li>
-        <li><a class="button" href="#">Déroulement d'une séance</a></li>
-        <li><a class="button" href="#">Tarif</a></li>
+  <!--========== SIDE-BAR- MOBILE ========-->
+  <!-- <div class="primary-navigation" id="primary-navigation"
+  data-visible="false">
+    <input class="search" type="text" placeholder="...">
+    <nav>
+      <ul >
+        <li><a href="index.htlml">Accueil</a></li>
+        <li><a href="presentation.htlml">Présentation</a></li>
+        <li><a href="sengager.htlml">S'engager dans un travail sur soi</a></li>
+        <li><a href="lien.htlml">En savoir plus</a></li>
+        <li><a href="contact.htlml">Me contacter</a></li>
       </ul>
-    </section>
+    </nav>
+  </div> -->
+  <!--========== MAIN ========-->
+  <main class="grid-item-3 container-subgrid">
+
+
+    <h1 class="subgrid-item-1">
+      Claire MIGNOT – Gestalt thérapeute
+    </h1>
+
+    <figure class="subgrid-item-2">
+      <img src="img/Claire-Mignot.JPG" alt="/">
+    </figure>
+    <article class="subgrid-item-3 hero-text">
+      <p class="center">Formée à la thérapie du lien</p>
+      <h2>Cergy le Haut</h2>
+      <p class="center">Tél: 06 52 40 61 62</p>
+    </article>
+
+
+    <!-- <h2 class="subgrid-item-4">
+      Bla bla
+    </h2> -->
+    <article class="subgrid-item-4">
+      <p class="start">
+        <!--text align: start-->
+        Vous trouverez sur ce site des informations sur ma façon de travailler, ses fondements et sa mise en œuvre, et
+        aussi sur mon parcours personnel. Ces éléments sont importants pour envisager un travail avec la thérapeute
+        relationnelle que je suis. Entrer dans le dialogue qui est au cœur de ma pratique supposera en effet un niveau
+        de confiance suffisant pour oser progressivement, et à votre mesure, vous dévoiler, avec ce que vous êtes. Vous
+        pouvez me contacter par mail ou téléphone si vous souhaitez des informations complémentaires ou des
+        éclaircissements.
+      </p>
+      <p class="start">
+        Un thérapeute a pour « mission » de soutenir l’élan de vie présent en chacun de ses patients, doté de sa
+        singularité, son environnement, ses besoins, ses désirs, ses difficultés et ses ressources propres. Et chaque
+        thérapeute est lui-même singulier. Je vous invite à prendre le temps nécessaire pour chercher et en trouver un
+        avec qui vous pourrez vous sentir suffisamment à l’aise. Bonne recherche, et peut-être à bientôt.
+      </p>
+    </article>
   </main>
 
-<!--========== FOOTER ========-->
+  <!--========== FOOTER ========-->
 
-  <footer>
+  <footer class="grid-item-4">
     <section>
       <h3>
         Informations pratiques:
       </h3>
-      <p>Phone: 0652406162</p>
+      <p>Adresse: 1 Villa des Aubades, 95800, Cergy</p>
+      <p>Tél: 0652406162</p>
       <p>Email: cmi.mignot@wanadoo.fr </p>
-      <p>Adress: 1 Villa des Aubades, 95800, Cergy</p>
+
     </section>
     <section>
       <p>Claire Mignot © 2022</p>
@@ -120,6 +156,7 @@
   <script src="js/vendor/modernizr-3.11.2.min.js"></script>
   <script src="js/plugins.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/nav.js"></script>
 
   <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
   <script>
@@ -127,6 +164,13 @@
     ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
   </script>
   <script src="https://www.google-analytics.com/analytics.js" async></script>
+
+
+  <!-- Bootstrap-->
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
 </body>
 
 </html>
