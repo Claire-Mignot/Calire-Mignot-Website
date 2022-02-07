@@ -28,8 +28,9 @@
 
   <!-- Google font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Klee+One:wght@600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&display=swap" rel="stylesheet">
   <!-- My CSS -->
   <link rel="stylesheet" href="stylesheets/main.css">
 
@@ -44,15 +45,10 @@
 
   <header class="grid-item-1">
     <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
-      <!-- aria -control to say the button control the ul with id=primary-control -->
-      <!-- aria-expanded to set: the menu is not expanded until you click on the burger to change aria-expanded to 'true'-->
-      <!-- <i class="fas fa-bars fa-1x"></i> -->
+ 
       <span></span>
     </button>
-    <!-- <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="true">
 
-      <i class="fas fa-times fa-1x"></i>
-    </button> -->
     <img src="img/Cergy.JPG" alt="/">
 
   </header>
@@ -62,48 +58,61 @@
     <input class="search" type="text" placeholder="Recherche...">
     <nav>
       <ul>
-        <li><a href="index.htlml">Accueil</a></li>
-        <li><a href="presentation.htlml">Présentation</a></li>
-        <li><a class="nav-sengager" href="sengager.htlml">
+        <li><a class="btn" href="index.html">Accueil</a></li>
+
+      
+
+        <div class="drop-wrapper">
+          <button class="btn" data-target="#dropright-1">Présentation</button>
+          <div class="drop-menu dropright-1" id="dropright-1">
+            <a href="parcours.html">Mon parcours</a>
+            <a href="approche.html">Mon approche</a>
+            <a href="cadre.html">Mon cadre éthique et déontologique</a>
+          </div>
+        </div>
+
+        <div class="drop-wrapper">
+          <button class="btn" data-target="#dropright-2">
             S'engager
             <br>
             dans un travail
             <br>
             sur soi
-          </a></li>
+          </button>
+          <div class="drop-menu dropright-2" id="dropright-2">
+            <a href="parcours.html">Pour quel motif consulter ?</a>
+            <a href="approche.html">Qu’attendre des séances ?</a>
+            <a href="cadre.html">Comment se déroule une séance ?</a>
+          </div>
+        </div>
+
+          <li><a href="pratique.htlml">Sur un plan pratique</a></li>
         <li><a href="lien.htlml">En savoir plus</a></li>
-        <li><a href="contact.htlml">Me contacter</a></li>
+        <li><a href="contact.htlml">Contact</a></li>
+
+        <li>
+
+        </li>
+
       </ul>
     </nav>
   </aside>
 
-  <!--========== SIDE-BAR- MOBILE ========-->
-  <!-- <div class="primary-navigation" id="primary-navigation"
-  data-visible="false">
-    <input class="search" type="text" placeholder="...">
-    <nav>
-      <ul >
-        <li><a href="index.htlml">Accueil</a></li>
-        <li><a href="presentation.htlml">Présentation</a></li>
-        <li><a href="sengager.htlml">S'engager dans un travail sur soi</a></li>
-        <li><a href="lien.htlml">En savoir plus</a></li>
-        <li><a href="contact.htlml">Me contacter</a></li>
-      </ul>
-    </nav>
-  </div> -->
+
   <!--========== MAIN ========-->
   <main class="grid-item-3 container-subgrid">
 
 
     <h1 class="subgrid-item-1">
       Claire MIGNOT – Gestalt thérapeute
+      <p class="center">Formée à la thérapie du lien</p>
     </h1>
 
     <figure class="subgrid-item-2">
       <img src="img/Claire-Mignot.JPG" alt="/">
     </figure>
     <article class="subgrid-item-3 hero-text">
-      <p class="center">Formée à la thérapie du lien</p>
+
       <h2>Cergy le Haut</h2>
       <p class="center">Tél: 06 52 40 61 62</p>
     </article>
@@ -139,7 +148,7 @@
         Informations pratiques:
       </h3>
       <p>Adresse: 1 Villa des Aubades, 95800, Cergy</p>
-      <p>Tél: 0652406162</p>
+      <p>Tél: 06 52 40 61 62</p>
       <p>Email: cmi.mignot@wanadoo.fr </p>
 
     </section>

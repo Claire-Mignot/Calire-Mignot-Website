@@ -24,7 +24,7 @@ html {
 /**
  * Basic styles for links
  */
-a, a:hover {
+nav a, a:hover {
   display: block;
   color: $text-color;
   text-decoration: none;
@@ -36,6 +36,7 @@ a, a:hover {
 }
 
 img {
+
   max-width: 100%;
   max-height: auto;
   object-fit: cover;
@@ -46,7 +47,11 @@ figure, img, h1, h2, h3, p, ul {
   padding: 0;
   margin: 0;
 }
-ul {
+
+main img {
+  padding: 1rem;
+}
+nav ul {
   list-style: none;
 }
 
@@ -54,14 +59,20 @@ ul {
 h1, h2, h3 {
   text-align: center;
 }
+main p {
+  text-align: justify;
+}
 p.center {
   text-align: center;
 }
-p.start {
-  text-align: left;
-}
+
 
 //BODY MARGIN
 body {
   margin: 0.5rem;
+}
+
+//Space between paragraph, and lists
+main p:not(:last-child),ul:not(:last-child)  {
+  margin-bottom: 1rem;
 }
